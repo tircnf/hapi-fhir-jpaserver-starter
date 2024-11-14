@@ -6,6 +6,39 @@ entries:
         # When using the list of objects option the valid supported kinds are
         # added, changed, deprecated, removed, fixed, and security.
         - kind: changed
+          description: updated curlimages/curl to 8.9.1
+        - kind: changed
+          description: "updated postgresql sub-chart to 15.5.22."
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack
+        - url: https://artifacthub.io/packages/helm/bitnami/postgresql
+    apiVersion: v2
+    appVersion: 7.2.0
+    created: "2024-11-14T21:06:10.374087662Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.5.22
+    description: A Helm chart for deploying the HAPI FHIR JPA server starter on Kubernetes.
+    digest: da2f8a57196c48f2cfa2c7849c185d4c5068780fdf1e206de6c95b609a142475
+    home: https://github.com/hapifhir/hapi-fhir-jpaserver-starter
+    name: hapi-fhir-jpaserver
+    sources:
+    - https://github.com/hapifhir/hapi-fhir-jpaserver-starter
+    type: application
+    urls:
+    - https://github.com/tircnf/hapi-fhir-jpaserver-starter/releases/download/helm-v0.17.1/hapi-fhir-jpaserver-0.17.1.tgz
+    version: 0.17.1
+  - annotations:
+      artifacthub.io/changes: |
+        # When using the list of objects option the valid supported kinds are
+        # added, changed, deprecated, removed, fixed, and security.
+        - kind: changed
           description: |
             updated HAPI FHIR starter image to 5.6.0
         - kind: added
@@ -58,4 +91,4 @@ entries:
     urls:
     - https://github.com/hapifhir/hapi-fhir-jpaserver-starter/releases/download/helm-v0.6.0/hapi-fhir-jpaserver-0.6.0.tgz
     version: 0.6.0
-generated: "2021-12-11T15:15:39.575025773Z"
+generated: "2024-11-14T21:06:10.374101067Z"
